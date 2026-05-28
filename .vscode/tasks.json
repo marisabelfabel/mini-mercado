@@ -1,0 +1,25 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Compilar",
+      "type": "shell",
+      "command": "if (-not (Test-Path target/classes)) { New-Item -ItemType Directory -Force -Path target/classes | Out-Null }; javac -encoding UTF-8 -d target/classes *.java",
+      "options": { "cwd": "${workspaceFolder}" },
+      "group": "build"
+    },
+    {
+      "label": "Rodar",
+      "type": "shell",
+      "command": "java -cp target/classes Main",
+      "options": { "cwd": "${workspaceFolder}" },
+      "dependsOn": "Compilar",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "focus": true,
+        "panel": "dedicated"
+      }
+    }
+  ]
+}
