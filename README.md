@@ -1,5 +1,7 @@
 # MiniMercado
 
+RA 825233499 - Marisabel Alejo Quispe
+
 Aplicação de console em Java para gerenciamento de clientes, produtos e compras.
 
 ## Pré-requisitos
